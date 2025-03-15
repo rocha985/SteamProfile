@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de <%= player.personaname %></title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Perfil Steam de <%= player.personaname %></h1>
+        <img src="<%= player.avatarfull %>" alt="Avatar" class="avatar">
+        <p><strong>Nome:</strong> <%= player.personaname %></p>
+        <p><strong>URL do Perfil:</strong> <a href="<%= player.profileurl %>" target="_blank">Ver Perfil</a></p>
+        <p><strong>Status:</strong> <%= player.personastate == 1 ? 'Online' : 'Offline' %></p>
+
+        <a href="/">Voltar</a>
+    </div>
+</body>
+</html>
