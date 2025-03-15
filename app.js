@@ -7,7 +7,6 @@ const app = express();
 const STEAM_API_KEY = process.env.STEAM_API_KEY;
 
 app.use(express.static('public'));
-
 app.set('view engine', 'ejs');
 
 const resolveVanityURL = async (username) => {
@@ -68,7 +67,4 @@ app.get('/perfil', async (req, res) => {
     }
 });
 
-const PORT = process.env.PORT || 3000; // Caso não esteja na Vercel, use a porta 3000
-app.listen(PORT, () => {
-    console.log(`Servidor rodando na porta ${PORT}`);
-});
+module.exports = app;
