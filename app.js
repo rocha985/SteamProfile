@@ -2,12 +2,15 @@ require('dotenv').config();
 
 const express = require('express');
 const axios = require('axios');
+const path = require('path');
 const app = express();
 
 const STEAM_API_KEY = process.env.STEAM_API_KEY;
 
-app.use(express.static('public'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+app.use(express.static('public'));
 
 const resolveVanityURL = async (username) => {
     try {
@@ -67,4 +70,7 @@ app.get('/perfil', async (req, res) => {
     }
 });
 
-module.exports = app;
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+});
