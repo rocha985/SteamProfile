@@ -10,7 +10,7 @@ const STEAM_API_KEY = process.env.STEAM_API_KEY;
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(express.static('public'));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 const resolveVanityURL = async (username) => {
     try {
