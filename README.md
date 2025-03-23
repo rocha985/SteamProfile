@@ -43,7 +43,7 @@ Como o projeto está hospedado na [Vercel](https://vercel.com/), você pode aces
 
 1. Clone o repositório:
    ```bash
-   git clone <[url-do-repositório](https://github.com/rocha985/SteamProfile.git)>
+   git clone https://github.com/rocha985/SteamProfile.git
    cd <diretório-do-repositório>
    
 2. Instale as dependências:
